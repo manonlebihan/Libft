@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 11:29:00 by y mle-biha        #+#    #+#             */
-/*   Updated: 2022/05/10 11:44:30 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/10 12:51:40 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,20 @@ int	ft_isalnum(int arg)
 
 int main()
 {
-    char c;
-    c='5';
+    int c;
+    c = '5';
     printf("Result when numeric character is passed (with ft): %d\n", ft_isalnum(c));
     printf("Result when numeric character is passed (with og): %d\n", isalnum(c));
 
-	c='a';
+	c = 'a';
     printf("Result when alpha character is passed (with ft): %d\n", ft_isalnum(c));
     printf("Result when alpha character is passed (with og): %d\n", isalnum(c));
     
-	c='+';
+	c = '+';
     printf("Result when non-numeric character is passed (with ft): %d\n", ft_isalnum(c));
     printf("Result when non-numeric character is passed (with og): %d\n", isalnum(c));
 
-    c=' ';
+    c = ' ';
     printf("Result when nothing is passed (with ft): %d\n", ft_isalnum(c));
     printf("Result when nothing is passed (with og): %d\n", isalnum(c));
 

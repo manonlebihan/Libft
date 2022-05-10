@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 11:48:18 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/10 12:27:49 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/10 12:48:47 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_isascii(int c)
 
 int main()
 {
-    char c;
+    int c;
     c = '5';
     printf("Result when numeric character is passed (with ft): %d\n", ft_isascii(c));
     printf("Result when numeric character is passed (with og): %d\n", isascii(c));

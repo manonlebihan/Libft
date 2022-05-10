@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:29:11 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/10 11:44:01 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/10 12:50:58 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,16 @@ int	ft_isalpha(int c)
 
 int main()
 {
-    char c;
-    c='a';
+    int c;
+    c = 'a';
     printf("Result when alpha character is passed (with ft): %d\n", ft_isalpha(c));
     printf("Result when alpha character is passed (with og): %d\n", isalpha(c));
 
-    c='4';
+    c = '4';
     printf("Result when numeric character is passed (with ft): %d\n", ft_isalpha(c));
     printf("Result when numeric character is passed (with og): %d\n", isalpha(c));
 
-    c=' ';
+    c = ' ';
     printf("Result when nothing is passed (with ft): %d\n", ft_isalpha(c));
     printf("Result when nothing is passed (with og): %d\n", isalpha(c));
 
