@@ -6,7 +6,7 @@
 /*   By: macbookpro <macbookpro@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 18:40:48 by macbookpro        #+#    #+#             */
-/*   Updated: 2022/05/12 19:15:26 by macbookpro       ###   ########.fr       */
+/*   Updated: 2022/05/13 16:05:55 by macbookpro       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,32 +25,28 @@ unsigned int	ft_strlen(char *str)
 char	*ft_strrchr(char *str, int searchedChar)
 {
 	int	i;
-	int	len;
 
-	i = 0;
-	len = ft_strlen;
-	while (str[i] != '\0')
+	i = ft_strlen(str);
+	while (i != 0)
 	{
 		if (str[i] == searchedChar)
-		{
-			return ();
-		}
-		i++;
+			return (str + i);
+		i--;
 	}
 	return (NULL);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 
 int	main()
 {
-	char str[] = "hello world";
-	char ch = 'w';
+	char str[] = "mini manon est belle";
+	char ch = 'm';
    	char *p, *p2;
 	p = ft_strrchr(str, ch);
 	p2 = strrchr(str, ch);
 	printf("ft_strrchr(str1, str2) = %s\n", p);
 	printf("strrchr(str1, str2) = %s", p2);
 	return (0);
-}
+}*/
