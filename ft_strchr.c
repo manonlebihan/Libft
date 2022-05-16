@@ -6,13 +6,13 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 15:28:50 by macbookpro        #+#    #+#             */
-/*   Updated: 2022/05/16 11:26:40 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/16 15:35:42 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <stdio.h>
 
-char	*ft_strchr(char *str, int searchedChar)
+char	*ft_strchr(const char *str, int searchedChar)
 {
 	int	i;
 
@@ -20,25 +20,8 @@ char	*ft_strchr(char *str, int searchedChar)
 	while (str[i] != '\0')
 	{
 		if (str[i] == searchedChar)
-		{
-			return (str + i);
-		}
+			return ((char *)str + i);
 		i++;
 	}
 	return (NULL);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-
-int	main()
-{
-	char str[] = "hello world";
-	char ch = 'w';
-   	char *p, *p2;
-	p = ft_strchr(str, ch);
-	p2 = strchr(str, ch);
-	printf("ft_strchr(str1, str2) = %s\n", p);
-	printf("strchr(str1, str2) = %s", p2);
-	return (0);
-}*/

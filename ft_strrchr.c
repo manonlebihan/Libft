@@ -6,15 +6,15 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 18:40:48 by macbookpro        #+#    #+#             */
-/*   Updated: 2022/05/16 11:27:15 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/16 15:34:52 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <stdio.h>
 
-unsigned int	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -22,7 +22,7 @@ unsigned int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strrchr(char *str, int searchedChar)
+char	*ft_strrchr(const char *str, int searchedChar)
 {
 	int	i;
 
@@ -30,23 +30,8 @@ char	*ft_strrchr(char *str, int searchedChar)
 	while (i != 0)
 	{
 		if (str[i] == searchedChar)
-			return (str + i);
+			return ((char *)str + i);
 		i--;
 	}
 	return (NULL);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-
-int	main()
-{
-	char str[] = "mini manon est belle";
-	char ch = 'm';
-   	char *p, *p2;
-	p = ft_strrchr(str, ch);
-	p2 = strrchr(str, ch);
-	printf("ft_strrchr(str1, str2) = %s\n", p);
-	printf("strrchr(str1, str2) = %s", p2);
-	return (0);
-}*/

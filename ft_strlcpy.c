@@ -6,14 +6,16 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:42:47 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/11 14:44:19 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/16 15:13:09 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+#include <stdio.h>
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	index;
-	unsigned int	src_size;
+	size_t	index;
+	size_t	src_size;
 
 	index = 0;
 	src_size = 0;
@@ -29,16 +31,3 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	dest[index] = '\0';
 	return (src_size);
 }
-
-/*#include <stdio.h>
-#include <bsd/string.h>
-
-int	main(void)
-{
-	char	dest[10] = " ";
-	char	dest2[10] = " "; 
-	char	src[20] = "HelloTheWorld";
-
-	printf("%d | %s\n%ld | %s", ft_strlcpy(dest, src, 6), dest, strlcpy(dest2, src, 6), dest2);
-	return (0);
-}*/

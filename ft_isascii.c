@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 11:48:18 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/10 12:48:47 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/16 15:41:20 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-
-/*#include <stdio.h>
-#include <ctype.h>
-
-int main()
-{
-    int c;
-    c = '5';
-    printf("Result when numeric character is passed (with ft): %d\n", ft_isascii(c));
-    printf("Result when numeric character is passed (with og): %d\n", isascii(c));
-
-	c = 'a';
-    printf("Result when alpha character is passed (with ft): %d\n", ft_isascii(c));
-    printf("Result when alpha character is passed (with og): %d\n", isascii(c));
-
-    c = '+';
-    printf("Result when non-numeric character is passed (with ft): %d\n", ft_isascii(c));
-    printf("Result when non-numeric character is passed (with og): %d\n", isascii(c));
-
-    c = ' ';
-    printf("Result when nothing is passed (with ft): %d\n", ft_isascii(c));
-    printf("Result when nothing is passed (with og): %d\n", isascii(c));
-
-    return 0;
-}*/

@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 13:44:17 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/10 12:47:08 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/16 14:55:27 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-
-
-/*#include <stdio.h>
-#include <ctype.h>
-
-int main()
-{
-    int c;
-    c = '5';
-    printf("Result when numeric character is passed (with ft): %d\n", ft_isdigit(c));
-    printf("Result when numeric character is passed (with og): %d\n", isdigit(c));
-
-    c = '+';
-    printf("Result when non-numeric character is passed (with ft): %d\n", ft_isdigit(c));
-    printf("Result when non-numeric character is passed (with og): %d\n", isdigit(c));
-
-    c = ' ';
-    printf("Result when nothing is passed (with ft): %d\n", ft_isdigit(c));
-    printf("Result when nothing is passed (with og): %d\n", isdigit(c));
-
-    return 0;
-}*/

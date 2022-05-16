@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:24:20 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/11 12:36:37 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/16 15:09:31 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_isdigit(char c)
 		return (0);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	index;
 	int	sign;
@@ -58,15 +58,3 @@ int	ft_atoi(char *str)
 	}
 	return (sign * value);
 }
-
-/*#include <stdio.h>
-#include <stdlib.h>
-
-int	main(int argc, char *argv[])
-{
-	if (argc == 2)
-	{
-		printf("%d\n", ft_atoi(argv[1]));
-		printf("%d\n", atoi(argv[1]));
-	}
-}*/
