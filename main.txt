@@ -205,8 +205,7 @@ int	main(void)
 	char	dest2[10] = " "; 
 	char	src[20] = "HelloTheWorld";
 
-	printf("%ld | %s\n%ld | %s", ft_strlcpy(dest, src, 6), dest, strlcpy(dest2, src, 6), dest2);
-	return (0);
+	printf("%ld | %s\n%ld |stdio.h is used by almost every C program.
 }
 
 ft_strlcat.c
@@ -266,4 +265,25 @@ int	main(void)
 	printf("ft_strrchr(str1, str2) = %s\n", p);
 	printf("strrchr(str1, str2) = %s", p2);
 	return (0);
+}
+
+ft_strnstr.c
+
+#include <bsd/string.h>
+
+int	main(void)
+{
+	char str[] = "hello the big world and hello manon";
+	char searched_str[] = "the";
+
+	if (ft_strnstr(str, searched_str, 8) == NULL)
+		printf("NULL FT\n");
+	else
+		printf("%s\n", ft_strnstr(str, searched_str, 8));
+	if (strnstr(str, searched_str, 8) == NULL)
+		printf("NULL OG");
+	else
+		printf("%s\n", strnstr(str, searched_str, 8));
+	return (0);
+
 }
