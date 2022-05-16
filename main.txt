@@ -287,3 +287,24 @@ int	main(void)
 	return (0);
 
 }
+
+ft_memset.c
+
+#include <string.h>
+
+int	main(void)
+{
+	char str[50] = "Manon est à 42, à Paris, en France.";
+	char str2[50] = "Manon est à 42, à Paris, en France.";
+
+	printf("Before    memset(): %s\n", str);
+	printf("Before ft_memset(): %s\n", str2);
+
+	memset(str, '.', 50);
+	ft_memset(str2, '.', 50);
+
+	printf("After    memset():  %s\n", str);
+	printf("After ft_memset():  %s\n", str2);
+
+	return (0);
+}
