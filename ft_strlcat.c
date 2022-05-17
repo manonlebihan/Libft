@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 14:45:56 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/16 15:37:16 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/18 00:13:40 by manonlebiha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
