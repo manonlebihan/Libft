@@ -329,3 +329,27 @@ int	main(void)
 
 	return (0);
 }
+
+ft_memcpy.c
+
+#include <string.h>
+
+int	main (void)
+{
+	char str1[] = "manon";
+	char str2[] = "hello world";
+	char str11[] = "manon";
+	char str22[] = "hello world";
+
+	printf("str1 before ft_memcpy : %s\n", str1);
+	printf("str1 before memcpy : %s\n", str11);
+	printf("str2 before ft_memcpy : %s\n", str2);
+	printf("str2 before memcpy : %s\n", str22);
+	ft_memcpy (str1, str2, 20);
+	memcpy (str11, str22, 20);
+	printf("str1 after ft_memcpy : %s \n", str1);
+	printf("str1 after memcpy : %s \n", str11);
+	printf("str2 after ft_memcpy : %s \n", str2);
+	printf("str2 after memcpy : %s \n", str22);
+	return (0);
+}
