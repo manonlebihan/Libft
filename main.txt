@@ -353,3 +353,8 @@ int	main (void)
 	printf("str2 after memcpy : %s \n", str22);
 	return (0);
 }
+
+ft_memmove.c
+
+
+ft_memchr.c
