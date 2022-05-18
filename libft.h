@@ -6,13 +6,12 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:11:01 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/18 11:11:03 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/18 11:27:39 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 #ifndef LIBFT_H
+# include <stdio.h>
 # define LIBFT_H
 
 int		ft_isalpha(int c);
