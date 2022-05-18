@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:11:01 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/18 11:27:39 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/18 14:04:33 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,9 @@ char	*ft_strchr(const char *str, int searchedChar);
 char	*ft_strrchr(const char *str, int searchedChar);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *str, const char *searched_str, size_t len);
+void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	ft_bzero(void *s, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 #endif
