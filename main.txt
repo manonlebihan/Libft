@@ -358,3 +358,31 @@ ft_memmove.c
 
 
 ft_memchr.c
+
+#include <string.h>
+
+int	main(void)
+{
+	char	s[] = "treslongmot";
+	char	*ptr = ft_memchr(s, 's', 5);
+	char	c[] = "treslongmot";
+	char	*ptrr = memchr(s, 's', 5);
+
+	printf("FT_MEMCHR\n");
+	if (ptr != NULL)
+	{
+		printf ("character found at position %ld\n", ptr - s + 1);
+		printf ("search character found:  %s\n", ptr);
+	}
+	else
+		printf ("search character not found\n");
+	printf("MEMCHR\n");
+	if (ptrr != NULL)
+	{
+		printf ("character found at position %ld\n", ptrr - c + 1);
+		printf ("search character found:  %s\n", ptrr);
+	}
+	else
+		printf ("search character not found\n");	
+	return (0);
+}
