@@ -386,3 +386,21 @@ int	main(void)
 		printf ("search character not found\n");	
 	return (0);
 }
+
+ft_memcmp.c
+
+int	main(void)
+{
+	int	ret = 0;
+
+	printf("Si s1 et s2 sont égales\n");
+	ret = ft_memcmp("abc", "abc", 2);
+	printf("ret = %d\n", ret);
+	printf("Si s1 est supérieure à s2\n");
+	ret = ft_memcmp("bca", "abc", 2);
+	printf("ret = %d\n", ret);
+	printf("Si s1 est inférieure à s2\n");
+	ret = ft_memcmp("abc", "mca", 2);
+	printf("ret = %d\n", ret);
+	return (0);
+}
