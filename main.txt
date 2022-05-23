@@ -201,7 +201,7 @@ ft_strlcpy.c
 
 int	main(void)
 {
-	char	dest[10] = " ";
+	char	dst[10] = " ";
 	char	dest2[10] = " "; 
 	char	src[20] = "HelloTheWorld";
 
@@ -214,10 +214,10 @@ ft_strlcat.c
 
 int    main(void)
 {
-    char dest[200] = "Manon";
+    char dst[200] = "Manon";
     char dest2[200] = "Manon";
     char src[] = "Hello world"; 
-    printf("%ld | %s\n%ld | %s", ft_strlcat(dest, src, 0), dest, strlcat(dest2, src, 0), dest2);
+    printf("%ld | %s\n%ld | %s", ft_strlcat(dst, src, 0), dst, strlcat(dest2, src, 0), dest2);
 	return (0);
 }
 
@@ -257,13 +257,13 @@ ft_strrchr.c
 
 int	main(void)
 {
-	char str[] = "mini manon est belle";
-	char ch = 'm';
-   	char *p, *p2;
-	p = ft_strrchr(str, ch);
-	p2 = strrchr(str, ch);
-	printf("ft_strrchr(str1, str2) = %s\n", p);
-	printf("strrchr(str1, str2) = %s", p2);
+	char s[] = "tripouille";
+	char c = 't';
+	char *p, *p2;
+	p = ft_strrchr(s, c);
+	p2 = strrchr(s, c);
+	printf("ft_strrchr(s, c) = %s\n", p);
+	printf("strrchr(s, c) = %s\n", p2);
 	return (0);
 }
 
@@ -356,6 +356,22 @@ int	main (void)
 
 ft_memmove.c
 
+#include <string.h>
+
+int main(void)
+{
+    char dst[5] = "hello";
+    const char src[]  = "manonlbn";
+	  char destt[5] = "hello";
+    const char srcc[]  = "manonlbn";
+    printf("Before ft_memmove >> dst = %s, src = %s\n", dst, src);
+    ft_memmove(dst, src, 8);
+    printf("After ft_memmove >> dst = %s, src = %s\n", dst, src);
+    printf("Before memmove >> dst = %s, src = %s\n", destt, srcc);
+    memmove(destt, srcc, 8);
+    printf("After memmove >> dst = %s, src = %s\n", destt, srcc);
+    return (0);
+}
 
 ft_memchr.c
 
