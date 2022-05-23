@@ -241,13 +241,13 @@ ft_strchr.c
 
 int	main(void)
 {
-	char str[] = "hello world";
-	char ch = 'w';
+	char s[] = "manon";
+	char c = 'm';
    	char *p, *p2;
-	p = ft_strchr(str, ch);
-	p2 = strchr(str, ch);
-	printf("ft_strchr(str1, str2) = %s\n", p);
-	printf("strchr(str1, str2) = %s", p2);
+	p = ft_strchr(s, c);
+	p2 = strchr(s, c);
+	printf("ft_strchr(s, c) = %s\n", p);
+	printf("strchr(s, c) = %s", p2);
 	return (0);
 }
 
