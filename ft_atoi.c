@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:24:20 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/16 15:09:31 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/23 18:51:37 by manonlebiha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,25 +36,25 @@ int	ft_isdigit(char c)
 
 int	ft_atoi(const char *str)
 {
-	int	index;
+	int	i;
 	int	sign;
 	int	value;
 
-	index = 0;
-	while (str[index] != '\0' && ft_isspace(str[index]) != 0)
-		index++;
+	i = 0;
+	while (str[i] != '\0' && ft_isspace(str[i]) != 0)
+		i++;
 	sign = 1;
-	if (ft_issign(str[index]) != 0)
+	if (ft_issign(str[i]) != 0)
 	{
-		if (str[index] == '-')
+		if (str[i] == '-')
 			sign = -1;
-		index++;
+		i++;
 	}
 	value = 0;
-	while (str[index] != '\0' && ft_isdigit(str[index]) != 0)
+	while (str[i] != '\0' && ft_isdigit(str[i]) != 0)
 	{
-		value = value * 10 + str[index] - '0';
-		index++;
+		value = value * 10 + str[i] - '0';
+		i++;
 	}
 	return (sign * value);
 }

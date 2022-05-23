@@ -3,31 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:42:47 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/16 15:13:09 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/23 18:56:15 by manonlebiha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	index;
+	size_t	i;
 	size_t	src_size;
 
-	index = 0;
+	i = 0;
 	src_size = 0;
 	while (src[src_size] != '\0')
 		src_size++;
-	if (size == 0)
+	if (dstsize == 0)
 		return (src_size);
-	while (index < (size - 1) && src[index] != '\0')
+	while (i < (dstsize - 1) && src[i] != '\0')
 	{
-		dest[index] = src[index];
-		index++;
+		dst[i] = src[i];
+		i++;
 	}
-	dest[index] = '\0';
+	dst[i] = '\0';
 	return (src_size);
 }

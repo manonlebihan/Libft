@@ -6,7 +6,7 @@
 /*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 14:45:56 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/18 00:13:40 by manonlebiha      ###   ########.fr       */
+/*   Updated: 2022/05/23 18:55:51 by manonlebiha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,29 +22,29 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	j;
 	size_t	k;
 
 	i = 0;
-	while (dest[i] != '\0')
+	while (dst[i] != '\0')
 		i++;
 	j = 0;
 	while (src[j])
 		j++;
-	if (size < i)
-		j = j + size;
+	if (dstsize < i)
+		j = j + dstsize;
 	else
 		j = j + i;
 	k = 0;
-	while (src[k] != '\0' && i < (size - 1) && size != 0)
+	while (src[k] != '\0' && i < (dstsize - 1) && dstsize != 0)
 	{
-		dest[i] = src[k];
+		dst[i] = src[k];
 		i++;
 		k++;
 	}
-	dest[i] = '\0';
+	dst[i] = '\0';
 	return (j);
 }
