@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:32:03 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/25 14:32:07 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/28 18:04:38 by manonlebiha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-/* #include <string.h>
-
-int	main(void)
-{
-	char s[] = "tripouille";
-	//char c = 't';
-	char *p, *p2;
-	p = ft_strrchr(s, 't' + 256);
-	p2 = strrchr(s, 't' + 256);
-	printf("ft_strrchr(s, c) = %s\n", p);
-	printf("strrchr(s, c) = %s\n", p2);
-	return (0);
-} */
