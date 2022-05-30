@@ -6,12 +6,12 @@
 /*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 23:33:52 by manonlebiha       #+#    #+#             */
-/*   Updated: 2022/05/30 23:38:57 by manonlebiha      ###   ########.fr       */
+/*   Updated: 2022/05/30 23:43:31 by manonlebiha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
