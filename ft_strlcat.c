@@ -3,24 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:30:28 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/25 14:30:31 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/05/31 00:11:39 by manonlebiha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -29,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	k;
 
 	i = 0;
-	while (dst[i] != '\0')
+	while (dst[i])
 		i++;
 	j = 0;
 	while (src[j])
