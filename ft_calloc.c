@@ -6,7 +6,7 @@
 /*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 23:41:08 by manonlebiha       #+#    #+#             */
-/*   Updated: 2022/05/30 23:48:33 by manonlebiha      ###   ########.fr       */
+/*   Updated: 2022/05/31 00:00:01 by manonlebiha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*p;
 
 	if ((nmemb == 0) || (size == 0))
-		return (NULL);
+		p = malloc(1);
 	p = malloc(nmemb * size);
 	ft_bzero(p, nmemb * size);
 	return (p);
