@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 10:01:59 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/01 16:23:39 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/01 20:35:56 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	dst = ft_substr(src, start, len);
 	printf("%s\n", dst);
 	return (0);
-} */
+}
+*/
