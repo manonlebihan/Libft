@@ -468,18 +468,17 @@ int	main(void) {
 
 ft_substr.c
 
-#include <string.h>
-
 int	main(void)
 {
-    char src[] = "substr function Implementation";
- 
-    int m = 7;
-    int n = 9;
- 
-    char	*dest = substr(src, m, n);
- 
-    printf("%s\n", dest);
- 
-    return 0;
+	char	*src;
+	char	*dst;
+	int		start;
+	int		len;
+
+	src = "hello tout le monde";
+	start = 6;
+	len = 19;
+	dst = ft_substr(src, start, len);
+	printf("%s\n", dst);
+	return (0);
 }

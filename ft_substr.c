@@ -3,50 +3,48 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
+/*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/30 23:51:55 by manonlebiha       #+#    #+#             */
-/*   Updated: 2022/05/31 02:43:57 by manonlebiha      ###   ########.fr       */
+/*   Created: 2022/06/01 10:01:59 by mle-biha          #+#    #+#             */
+/*   Updated: 2022/06/01 16:23:39 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdlib.h>
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*dst;
+	char		*dst;
+	size_t		i;
+	int			dst_len;
 
-	dst = malloc(len);
-	if (dst != NULL)
-		ft_strlcat(dst, s + start, len);
-	return (dst);
+	dst_len = len - start;
+	i = start;
+	dst = (char *)malloc((dst_len + 1) * sizeof(char));
+	if (dst == NULL)
+		return (NULL);
+	while (i < len && (*(s + i) != '\0'))
+	{
+		*dst = *(s + i);
+		dst++;
+		i++;
+	}
+	*dst = '\0';
+	return (dst - dst_len);
 }
- */
-#include <stdio.h>
-#include <stdlib.h>
- 
-// Following function extracts characters present in `src`
-// between `m` and `n` (excluding `n`)
-char* substr(const char *src, int m, int n)
+
+/* int	main(void)
 {
-    // get the length of the destination string
-    int len = n - m;
- 
-    // allocate (len + 1) chars for destination (+1 for extra null character)
-    char *dest = (char*)malloc(sizeof(char) * (len + 1));
- 
-    // extracts characters between m'th and n'th index from source string
-    // and copy them into the destination string
-    for (int i = m; i < n && (*(src + i) != '\0'); i++)
-    {
-        *dest = *(src + i);
-        dest++;
-    }
- 
-    // null-terminate the destination string
-    *dest = '\0';
- 
-    // return the destination string
-    return dest - len;
-}
+	char	*src;
+	char	*dst;
+	int		start;
+	int		len;
+
+	src = "hello tout le monde";
+	start = 6;
+	len = 19;
+	dst = ft_substr(src, start, len);
+	printf("%s\n", dst);
+	return (0);
+} */
