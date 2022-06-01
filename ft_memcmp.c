@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:31:23 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/25 14:31:25 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/01 10:04:49 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*p1;
 	unsigned char	*p2;
-	size_t			i;
 
 	p1 = (unsigned char *)s1;
 	p2 = (unsigned char *)s2;
-	i = 0;
 	if (s1 == s2)
 		return (0);
 	while (n > 0)
