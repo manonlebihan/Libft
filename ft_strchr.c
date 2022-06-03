@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:31:07 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/01 22:43:08 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/03 16:39:27 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strchr(const char *s, int c)
 	return ((char *)s);
 }
 
-#include <string.h>
+/* #include <string.h>
 
 int	main(void)
 {
@@ -35,7 +35,7 @@ int	main(void)
 	printf("strchr(s, 't' + 256) = %s", p2);
 	return (0);
 }
-
+ */
 /* char	*ft_strrchr(const char *s, int c)
 {
 	int	i;

@@ -1,6 +1,6 @@
 LIBNAME = libft.a
 CC      = gcc
-CFLAGS  = -Wall -Wextra -Werror -I.
+CFLAGS  = -Wall -Wextra -Werror -I. -g
 AR      = ar
 ARFLAGS = -cvq
 SRC     = ${wildcard *.c}
