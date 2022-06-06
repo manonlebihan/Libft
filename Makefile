@@ -1,4 +1,4 @@
-LIBNAME = libft.a
+NAME = libft.a
 CC      = gcc
 CFLAGS  = -Wall -Wextra -Werror -I. -g
 AR      = ar
@@ -6,9 +6,9 @@ ARFLAGS = -cvq
 SRC     = ${wildcard *.c}
 OBJ     = $(SRC:.c=.o)
 
-all: ${LIBNAME}
+all: ${NAME}
 
-${LIBNAME}: ${OBJ}
+${NAME}: ${OBJ}
 	${AR} $(ARFLAGS) $@ $^
 
 %.o: %.c %.h
@@ -18,8 +18,8 @@ clean:
 	rm -f ${OBJ}
 
 fclean: clean
-	rm -f ${LIBNAME}
+	rm -f ${NAME}
 
 re: fclean all
 
-.PHONY : clean fclean
+.PHONY : clean fclean re
