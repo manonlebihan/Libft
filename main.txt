@@ -480,3 +480,17 @@ int	main(void)
 	printf("%s\n", dst);
 	return (0);
 }
+
+ft_strjoin.c
+
+int	main(void)
+{
+	char	*s1;
+	char	*s2;
+	char	*s4;
+
+	s1 = "Hello";
+	s2 = "World";
+	s4 = ft_strjoin(s1, s2);
+	printf("%s\n", s4);
+}
