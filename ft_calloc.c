@@ -13,13 +13,11 @@
 #include <stdlib.h>
 #include "libft.h"
 
-#define MAX_SIZE_T (size_t)-1
-
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
 
-	if (nmemb > 0 && (MAX_SIZE_T / nmemb) < size)
+	if (nmemb > 0 && (((size_t)-1) / nmemb) < size)
 		return (NULL);
 	if ((nmemb == 0) || (size == 0))
 	{
