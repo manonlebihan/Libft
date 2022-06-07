@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 {
 	size_t	i;
 	size_t	j;
@@ -24,12 +24,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	j = 0;
 	while (src[j])
 		j++;
-	if (dstsize < i)
-		j = j + dstsize;
+	if (dst_size < i)
+		j = j + dst_size;
 	else
 		j = j + i;
 	k = 0;
-	while (src[k] != '\0' && i < (dstsize - 1) && dstsize != 0)
+	while (src[k] != '\0' && i < (dst_size - 1) && dst_size != 0)
 	{
 		dst[i] = src[k];
 		i++;

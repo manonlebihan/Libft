@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 {
 	size_t	i;
 	size_t	src_size;
@@ -21,9 +21,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	src_size = 0;
 	while (src[src_size] != '\0')
 		src_size++;
-	if (dstsize == 0)
+	if (dst_size == 0)
 		return (src_size);
-	while (i < (dstsize - 1) && src[i] != '\0')
+	while (i < (dst_size - 1) && src[i] != '\0')
 	{
 		dst[i] = src[i];
 		i++;
