@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:33:01 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/25 14:33:02 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/07 19:07:20 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,68 +19,21 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
+	j = 0;
+	if (len > ft_strlen(haystack))
+		len = ft_strlen(haystack);
 	if (needle[0] == '\0')
 		return ((char *)haystack);
-	while (i < len && haystack[i])
+	while (i < len && haystack[i] && needle[j])
 	{
 		j = 0;
-		while (haystack[i] && needle[j] && haystack[i] == needle[j])
+		while (haystack[i + j] == needle[j] && i + j < len)
 		{
-			++i;
-			++j;
+			if (needle[j + 1] == '\0')
+				return ((char *)haystack + i);
+			j++;
 		}
-		if (needle[j] == '\0')
-			return ((char *)&haystack[i - j]);
-		i = i - j + 1;
+		i++;
 	}
-	return (0);
+	return (NULL);
 }
-
-/* char *
-ft_strnstr(const char *s, const char *find, size_t slen)
-{
-	char c, sc;
-	size_t len;
-
-	if ((c = *find++) != '\0') 
-	{
-		len = ft_strlen(find);
-		do {
-			do {
-				if (slen-- < 1 || (sc = *s++) == '\0')
-					return (NULL);
-			} while (sc != c);
-			if (len > slen)
-				return (NULL);
-		} while (ft_strncmp(s, find, len) != 0);
-		s--;
-	}
-	return ((char *)s);
-}
-
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
-{
-	char	c;
-	char	sc;
-	size_t	nlen;
-
-	c = *needle++;
-	sc = *haystack++;
-	if (c != '\0')
-	{
-		nlen = ft_strlen(needle);
-		while (ft_strncmp(haystack, needle, nlen) != 0)
-		{
-			while (sc != c)
-			{
-				if (nlen-- < 1 || sc == '\0')
-					return (NULL);
-			}
-			if (nlen > len)
-				return (NULL);
-		}
-		haystack--;
-	}
-	return ((char *)haystack);
-}
- */
