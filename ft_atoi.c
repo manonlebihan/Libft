@@ -6,9 +6,11 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:32:47 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/03 16:41:34 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/08 10:25:22 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isspace(char c)
 {
@@ -21,14 +23,6 @@ int	ft_isspace(char c)
 int	ft_issign(char c)
 {
 	if (c == '+' || c == '-')
-		return (1);
-	else
-		return (0);
-}
-
-static int	ft_isdigit(char c)
-{
-	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);
