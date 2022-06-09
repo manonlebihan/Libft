@@ -3,38 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 10:33:06 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/08 10:33:08 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/09 18:14:03 by manonlebiha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
-	size_t	j;
-	size_t	k;
+	size_t	slen;
+	size_t	dlen;
 
-	i = 0;
-	while (dst[i])
-		i++;
-	j = 0;
-	while (src[j])
-		j++;
-	if (dst_size < i)
-		j = j + dst_size;
+	slen = ft_strlen(src);
+	dlen = ft_strlen(dst);
+	if (dlen >= size)
+		return (size + slen);
+	if (slen + dlen < size)
+		ft_memcpy(dst + dlen, src, slen + 1);
 	else
-		j = j + i;
-	k = 0;
-	while (src[k] != '\0' && i < (dst_size - 1) && dst_size != 0)
 	{
-		dst[i] = src[k];
-		i++;
-		k++;
+		ft_memcpy(dst + dlen, src, size - dlen - 1);
+		dst[size - 1] = '\0';
 	}
-	dst[i] = '\0';
-	return (j);
+	return (dlen + slen);
 }
