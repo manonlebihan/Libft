@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+         #
+#    By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 11:39:51 by mle-biha          #+#    #+#              #
-#    Updated: 2022/06/08 15:31:30 by mle-biha         ###   ########.fr        #
+#    Updated: 2022/06/09 18:28:14 by manonlebiha      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRC     = ft_atoi.c \
 			ft_memcpy.c \
 			ft_memmove.c \
 			ft_memset.c \
+			ft_putchar_fd.c \
 			ft_split.c \
 			ft_strchr.c \
 			ft_strdup.c \
