@@ -508,3 +508,25 @@ int	main(void)
 	s3 = ft_strtrim(s1, set);
 	printf("%s\n", s3);
 }
+
+ft_split.c
+
+int	main(void)
+{
+	char	**res;
+	char	*s;
+	char	c;
+	int		i;
+
+	i = 0;
+	s = "manon est a paris demain aussi";
+	c = 'a';
+	res = ft_split(s, c);
+	
+	while (res[i])
+	{
+		printf("%d   =>   %s\n", i, res[i]);
+		i++;
+	}
+	return (0);
+}

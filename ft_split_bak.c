@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_split_bak.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 10:38:00 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/10 00:16:39 by manonlebiha      ###   ########.fr       */
+/*   Updated: 2022/06/09 23:53:42 by manonlebiha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,38 +50,34 @@ char	**ft_split(char const *s, char c)
 	int		count_word;
 	int		count_char;
 	int		i;
-	int		start;
 
-	if (!s) 
-		return (NULL);
 	i = 0;
-	start = 0;
 	count_word = ft_count_word(s, c);
-	if (count_word <= 1)
-	{
-		res = (char **)malloc(sizeof (char *));
-		if (res == NULL)
-			return (NULL);
-		ft_memcpy(res[0], s, ft_strlen(s));
-		return (res);
-	}
-	res = (char **)malloc((count_word + 2) * sizeof (char *));
-	if (res == NULL)
-		return (NULL);
+/* 	if (count_word <= 1)
+		return (s); */
+	res = (char **)malloc((count_word + 1) * sizeof (char *));
+	printf("count_word = %d\n", count_word+1);
 	while (i <= count_word)
 	{
-		count_char = ft_count_char(s + start, c);
-		res[i] = ft_substr(s, start, count_char);
-		if (res[i] == NULL)
-			return (NULL);
-		start += count_char + 1;
+		count_char = ft_count_char(s, c);
+		res[i] = (char *)malloc((count_char + 1) * sizeof (char));
+		ft_strlcpy(res[i], s, count_char + 1);
+		printf("%d    %s\n", i, res[i]);
+		s += count_char + 1;
 		i++;
 	}
+	i = 0;
+	while (i<6)
+	{
+		printf("%d   =========>   %s\n", i, res[i]);
+		i++;
+	}
+
 	res[count_word + 1] = NULL;
 	return (res);
 }
 
-/* int	main(void)
+int	main(void)
 {
 	char	**res;
 	char	*s;
@@ -90,13 +86,19 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	s = "manon est a paris demain aussi";
-	c = 'a';
+	c = ' ';
 	res = ft_split(s, c);
-	
+
+/* 		printf("%s\n", res[0]);
+		printf("%s\n", res[1]);
+		printf("%s\n", res[2]);
+		printf("%s\n", res[3]); */
+
+
 	while (res[i])
 	{
 		printf("%d   =>   %s\n", i, res[i]);
 		i++;
 	}
 	return (0);
-} */
+}

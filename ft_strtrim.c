@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 10:02:10 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/07 17:39:01 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/09 18:20:21 by manonlebiha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j--;
 	s2 = ft_substr(s1, i, (j - i + 1));
 	return (s2);
+}
+
+int	main(void)
+{
+	char	*s1;
+	char	*set;
+	char	*s3;
+
+	s1 = "          ";
+	set = " ";
+	s3 = ft_strtrim(s1, set);
+	printf("%s\n", s3);
 }
