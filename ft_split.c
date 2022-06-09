@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 10:38:00 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/08 19:16:54 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/09 08:52:11 by manonlebiha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,65 +14,37 @@
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_count_word(const char *s, char c)
+char	*ft_new_str(char *s, int s_start, int s_finish)
 {
-	int	i;
-	int	word_count;
+	char	*new_str;
+	char	i;
 
-	i = 0;
-	word_count = 1;
-	if (s[0] == '\0')
-		return (0);
-	while (s[i])
+	new_str = malloc((s_finish - s_start + 1) * sizeof(char));
+	while (i < s_finish)
 	{
-		if (s[i] == c)
-			word_count++;
 		i++;
 	}
-	return (word_count);
+	
 }
 
-char	*ft_word_dup(const char *s, int s_start, int s_finish)
+int	main(void)
 {
-	char	*word;
-	int		i;
+	char	*s;
+	//char	c;
+	char	*res;
 
-	i = 0;
-	word = malloc((s_finish - s_start + 1) * sizeof(char));
-	if (word == NULL)
-		return (NULL);
-	while (s_start < s_finish)
-		word[i++] = s[s_start++];
-	word[i] = '\0';
-	return (word);
+	s = "manon est la";
+	//c = ' ';
+	res = ft_new_str(s, 0, 4);
+
+	printf("%d\n", res);
 }
 
-char	**ft_split(char const *s, char c)
-{
-	size_t	i;
-	size_t	j;
-	int		index;
-	char	**res;
+char = M A N O N   E S T   L  A
+inde = 0 1 2 3 4 5 6 7 8 9 10 11
+memo = 1 2 3 4 5 6 7 8 9 10 11 12
 
-	i = 0;
-	j = 0;
-	index = -1;
-	res = malloc((ft_count_word(s, c) + 1) * sizeof(char *));
-	if (res == NULL)
-		return (NULL);
-	if (!s)
-		return (0);
-	while (i <= ft_strlen(s))
-	{
-		if (s[i] != c && index < 0)
-			index = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
-		{
-			res[j++] = ft_word_dup(s, index, i);
-			index = -1;
-		}
-		i++;
-	}
-	res[j] = 0;
-	return (res);
-}
+M  A  N  O  N \0
+13 14 15 16 17 18
+
+ft_new_str("manon est la", 0, 4);
