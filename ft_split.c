@@ -5,98 +5,82 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/08 10:38:00 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/10 00:16:39 by manonlebiha      ###   ########.fr       */
+/*   Created: 2022/06/10 15:08:54 by manonlebiha       #+#    #+#             */
+/*   Updated: 2022/06/10 21:31:31 by manonlebiha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "libft.h"
 
-int	ft_count_word(const char *s, char c)
+int	ft_word_count(const char *s, char c)
 {
+	int	count;
 	int	i;
-	int	word_count;
 
+	count = 0;
 	i = 0;
-	word_count = 0;
-	if (s[0] == '\0')
-		return (0);
 	while (s[i])
 	{
-		if (s[i] == c)
-			word_count++;
+		if (s[i] != c && (s[i + 1] == '\0' || s[i + 1] == c))
+			count++;
 		i++;
 	}
-	return (word_count);
+	return (count);
 }
 
-int	ft_count_char(const char *s, char c)
+int	ft_char_count(const char *s, char c)
 {
+	int	count;
 	int	i;
 
+	count = 0;
 	i = 0;
-	if (s[0] == '\0')
-		return (0);
+	while (s[i] && s[i] == c)
+		i++;
 	while (s[i] && s[i] != c)
+	{
+		count++;
 		i++;
-	return (i);
+	}
+	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_free_split(char **split, int i)
 {
-	char	**res;
-	int		count_word;
-	int		count_char;
-	int		i;
-	int		start;
-
-	if (!s) 
-		return (NULL);
-	i = 0;
-	start = 0;
-	count_word = ft_count_word(s, c);
-	if (count_word <= 1)
-	{
-		res = (char **)malloc(sizeof (char *));
-		if (res == NULL)
-			return (NULL);
-		ft_memcpy(res[0], s, ft_strlen(s));
-		return (res);
-	}
-	res = (char **)malloc((count_word + 2) * sizeof (char *));
-	if (res == NULL)
-		return (NULL);
-	while (i <= count_word)
-	{
-		count_char = ft_count_char(s + start, c);
-		res[i] = ft_substr(s, start, count_char);
-		if (res[i] == NULL)
-			return (NULL);
-		start += count_char + 1;
-		i++;
-	}
-	res[count_word + 1] = NULL;
-	return (res);
+	while (i--)
+		free(split[i]);
+	free(split);
+	return (NULL);
 }
 
-/* int	main(void)
+char	**ft_split(const char *s, char c)
 {
-	char	**res;
-	char	*s;
-	char	c;
+	char	**split;
+	int		len;
 	int		i;
 
+	if (!s)
+		return (NULL);
+	split = (char **)malloc((ft_word_count(s, c) + 1) * sizeof(char *));
+	if (!split)
+		return (NULL);
 	i = 0;
-	s = "manon est a paris demain aussi";
-	c = 'a';
-	res = ft_split(s, c);
-	
-	while (res[i])
+	while (*s)
 	{
-		printf("%d   =>   %s\n", i, res[i]);
-		i++;
+		if (*s++ != c)
+		{
+			s--;
+			split[i] = (char *)
+				malloc(((len = ft_char_count(s, c)) + 1) * sizeof(char));
+			if (!(split[i]))
+				return (ft_free_split(split, i));
+			ft_strlcpy(split[i++], s, len + 1);
+			s += len;
+		}
 	}
-	return (0);
-} */
+	split[i] = NULL;
+	return (split);
+}
