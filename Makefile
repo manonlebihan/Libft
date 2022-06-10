@@ -6,7 +6,7 @@
 #    By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 11:39:51 by mle-biha          #+#    #+#              #
-#    Updated: 2022/06/10 21:42:16 by manonlebiha      ###   ########.fr        #
+#    Updated: 2022/06/10 21:55:30 by manonlebiha      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRC     = ft_atoi.c \
 			ft_memmove.c \
 			ft_memset.c \
 			ft_putchar_fd.c \
+			ft_putendl_fd.c \
 			ft_putstr_fd.c \
 			ft_split.c \
 			ft_strchr.c \
