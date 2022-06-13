@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
+/*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/10 22:01:56 by manonlebiha       #+#    #+#             */
-/*   Updated: 2022/06/10 22:36:11 by manonlebiha      ###   ########.fr       */
+/*   Created: 2022/06/13 13:15:34 by mle-biha          #+#    #+#             */
+/*   Updated: 2022/06/13 13:15:35 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

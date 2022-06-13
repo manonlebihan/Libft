@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
+/*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/10 21:54:29 by manonlebiha       #+#    #+#             */
-/*   Updated: 2022/06/10 22:00:13 by manonlebiha      ###   ########.fr       */
+/*   Created: 2022/06/13 13:15:40 by mle-biha          #+#    #+#             */
+/*   Updated: 2022/06/13 13:15:41 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
