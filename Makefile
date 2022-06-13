@@ -6,7 +6,7 @@
 #    By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 19:48:34 by mle-biha          #+#    #+#              #
-#    Updated: 2022/06/13 19:51:34 by mle-biha         ###   ########.fr        #
+#    Updated: 2022/06/13 20:48:09 by mle-biha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRC     = ft_atoi.c \
 			ft_split.c \
 			ft_strchr.c \
 			ft_strdup.c \
+			ft_striteri.c \
 			ft_strjoin.c \
 			ft_strlcat.c \
 			ft_strlcpy.c \
