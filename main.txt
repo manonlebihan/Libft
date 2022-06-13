@@ -565,3 +565,22 @@ int	main(void)
 {
 	printf("%s\n", ft_itoa(-9));
 }
+
+ft_strmapi.c
+
+#include <stdio.h>
+
+char f(unsigned int i, char str)
+{
+	printf("My function: index = %d and %c\n", i, str);
+	return str - 32;
+}
+
+int main()
+{
+	char str[10] = "manon";
+	printf("The result is %s\n", str);
+	char *result = ft_strmapi(str, f);
+	printf("The result is %s\n", result);
+	return 0;
+}

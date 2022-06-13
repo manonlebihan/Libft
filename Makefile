@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+         #
+#    By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/07 11:39:51 by mle-biha          #+#    #+#              #
-#    Updated: 2022/06/13 12:45:18 by manonlebiha      ###   ########.fr        #
+#    Created: 2022/06/13 19:48:34 by mle-biha          #+#    #+#              #
+#    Updated: 2022/06/13 19:51:34 by mle-biha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRC     = ft_atoi.c \
 			ft_strlcat.c \
 			ft_strlcpy.c \
 			ft_strlen.c \
+			ft_strmapi.c \
 			ft_strncmp.c \
 			ft_strnstr.c \
 			ft_strrchr.c \
