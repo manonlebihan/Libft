@@ -6,7 +6,7 @@
 #    By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 11:39:51 by mle-biha          #+#    #+#              #
-#    Updated: 2022/06/10 22:02:36 by manonlebiha      ###   ########.fr        #
+#    Updated: 2022/06/13 12:45:18 by manonlebiha      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC     = ft_atoi.c \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isprint.c \
+			ft_itoa.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_memcpy.c \

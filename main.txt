@@ -556,3 +556,12 @@ int	main(void)
 		printf("NULL");
 	printf("\n");
 }
+
+ft_itoa.c
+
+#include <stdio.h>
+
+int	main(void)
+{
+	printf("%s\n", ft_itoa(-9));
+}
