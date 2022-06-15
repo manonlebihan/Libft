@@ -6,7 +6,7 @@
 #    By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 19:48:34 by mle-biha          #+#    #+#              #
-#    Updated: 2022/06/13 20:48:09 by mle-biha         ###   ########.fr        #
+#    Updated: 2022/06/15 14:17:53 by mle-biha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,12 +52,19 @@ SRC     = ft_atoi.c \
 
 OBJ     = $(SRC:.c=.o)
 
+BONUS_SRC = ft_lstnew.c \
+
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
+
 all: ${NAME}
 
 ${NAME}: ${OBJ}
 	${AR} $(ARFLAGS) $@ $^
 
 %.o: %.c %.h
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+bonus: ${OBJ} ${BONUS_OBJ}
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
