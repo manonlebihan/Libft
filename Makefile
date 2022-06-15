@@ -6,7 +6,7 @@
 #    By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 19:48:34 by mle-biha          #+#    #+#              #
-#    Updated: 2022/06/15 17:15:35 by mle-biha         ###   ########.fr        #
+#    Updated: 2022/06/15 23:20:23 by mle-biha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,16 +63,16 @@ BONUS_OBJ = $(BONUS_SRC:.c=.o)
 all: ${NAME}
 
 ${NAME}: ${OBJ}
-	${AR} $(ARFLAGS) $@ $^
+	${AR} $(ARFLAGS) $(NAME) $(OBJ)
 
 %.o: %.c %.h
-	$(CC) $(CFLAGS) -o $@ -c $<
+	$(CC) $(CFLAGS) $< -c -o $@
 
-bonus: ${OBJ} ${BONUS_OBJ}
-	$(CC) $(CFLAGS) -o $@ -c $<
+bonus: $(NAME) ${BONUS_OBJ}
+	${AR} $(ARFLAGS) $(NAME) $(BONUS_OBJ)
 
 clean:
-	rm -f ${OBJ}
+	rm -f ${OBJ} $(BONUS_OBJ)
 
 fclean: clean
 	rm -f ${NAME}
