@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 13:13:38 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/13 13:13:41 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/15 22:54:44 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,30 +19,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*s2;
 	int		i;
 	int		j;
+	int		k;
 
 	i = 0;
 	j = ft_strlen(s1);
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	while (ft_strchr(set, s1[i]))
+	while (s1[i] != '\0' && ft_strchr(set, s1[i]))
 		i++;
-	while (ft_strchr(set, s1[j]) && j > i)
+	while (j > i && ft_strchr(set, s1[j - 1]))
 		j--;
-	s2 = ft_substr(s1, i, (j - i + 1));
-	printf("hello: ey %c", s2[0]);
-	if (s2 == NULL)
-		printf("NULL");
+	s2 = (char *)ft_calloc((j - i + 1), sizeof(char));
+	if (!s2)
+		return (NULL);
+	k = 0;
+	while (i < j)
+		s2[k++] = s1[i++];
 	return (s2);
-}
-
-int	main(void)
-{
-	char	*s1;
-	char	*set;
-	char	*s3;
-
-	s1 = "          ";
-	set = " ";
-	s3 = ft_strtrim(s1, set);
-	printf("%s\n", s3);
 }
