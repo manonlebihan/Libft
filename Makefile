@@ -6,7 +6,7 @@
 #    By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 19:48:34 by mle-biha          #+#    #+#              #
-#    Updated: 2022/06/16 23:13:32 by manonlebiha      ###   ########.fr        #
+#    Updated: 2022/06/16 23:21:26 by manonlebiha      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ BONUS_SRC = ft_lstadd_back.c \
 			ft_lstadd_front.c \
 			ft_lstclear.c \
 			ft_lstdelone.c \
+			ft_lstiter.c \
 			ft_lstlast.c \
 			ft_lstnew.c \
 			ft_lstsize.c \
