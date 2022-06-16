@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 17:04:09 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/15 23:58:45 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/16 14:10:19 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_list	*ft_lstlast(t_list *lst)
 	return (lst);
 }
 
-void freeList(t_list *head) {if (head) freeList(head->next); free(head);}
+/* void freeList(t_list *head) {if (head) freeList(head->next); free(head);}
 
 int main(void)
 {
@@ -41,7 +41,7 @@ int main(void)
         l2 = ft_lstlast(l)->next;
 		if (!l2)
 			printf("test 4 : l2 est NULL\n");
-        freeList(l); /* showLeaks();
-        write(1, "\n", 1); */
+        freeList(l); showLeaks();
+        write(1, "\n", 1);
         return (0);
-}
+} */

@@ -6,7 +6,7 @@
 #    By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 19:48:34 by mle-biha          #+#    #+#              #
-#    Updated: 2022/06/15 23:20:23 by mle-biha         ###   ########.fr        #
+#    Updated: 2022/06/16 14:13:26 by mle-biha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ OBJ     = $(SRC:.c=.o)
 
 BONUS_SRC = ft_lstadd_back.c \
 			ft_lstadd_front.c \
+			ft_lstdelone.c \
 			ft_lstlast.c \
 			ft_lstnew.c \
 			ft_lstsize.c \
