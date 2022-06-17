@@ -6,12 +6,10 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 10:27:45 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/07 11:14:26 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 14:37:30 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

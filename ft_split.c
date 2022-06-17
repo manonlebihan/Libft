@@ -6,13 +6,10 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 13:13:10 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/13 13:13:15 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 14:37:10 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 int	ft_word_count(const char *s, char c)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+        */
+/*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 23:51:43 by manonlebiha       #+#    #+#             */
-/*   Updated: 2022/06/17 00:21:41 by manonlebiha      ###   ########.fr       */
+/*   Updated: 2022/06/17 12:01:09 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 /* t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
+	
 }
  */

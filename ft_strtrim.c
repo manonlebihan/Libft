@@ -6,13 +6,11 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 13:13:38 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/15 22:54:44 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 14:37:45 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
