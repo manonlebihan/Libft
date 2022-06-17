@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 15:58:16 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/15 21:36:46 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:43:33 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 	nb = n;
 	i = 0;
 	len = ft_input_length(nb);
-	res = ft_calloc((len + 2), sizeof(char));
+	res = ft_calloc((len + 1), sizeof(char));
 	if (res == NULL)
 		return (NULL);
 	if (nb < 0)
