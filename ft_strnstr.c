@@ -6,11 +6,10 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:33:01 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/07 19:07:20 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:09:08 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)

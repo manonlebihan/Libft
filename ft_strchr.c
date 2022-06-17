@@ -6,11 +6,11 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:31:07 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/07 16:55:16 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:08:30 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

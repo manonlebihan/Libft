@@ -6,11 +6,11 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:31:23 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/01 10:04:49 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:07:31 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

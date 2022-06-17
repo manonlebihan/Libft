@@ -6,11 +6,10 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 13:15:40 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/13 13:15:41 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:08:20 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)

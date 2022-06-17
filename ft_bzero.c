@@ -6,11 +6,11 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:01:16 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/18 11:01:20 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:06:53 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

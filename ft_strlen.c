@@ -6,11 +6,11 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:18:59 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/16 15:27:37 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:08:56 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

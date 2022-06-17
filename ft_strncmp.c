@@ -6,11 +6,11 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:30:57 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/25 14:31:00 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:09:03 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

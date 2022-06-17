@@ -6,11 +6,11 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:30:41 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/05/25 14:30:44 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:08:52 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 {
