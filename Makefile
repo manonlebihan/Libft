@@ -6,7 +6,7 @@
 #    By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 19:48:34 by mle-biha          #+#    #+#              #
-#    Updated: 2022/06/17 15:43:06 by mle-biha         ###   ########.fr        #
+#    Updated: 2022/06/17 16:22:28 by mle-biha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,34 +52,34 @@ SRC     = ft_atoi.c \
 
 OBJ     = $(SRC:.c=.o)
 
-BONUS_SRC = ft_lstadd_back_bonus.c \
-			ft_lstadd_front_bonus.c \
-			ft_lstclear_bonus.c \
-			ft_lstdelone_bonus.c \
-			ft_lstiter_bonus.c \
-			ft_lstlast_bonus.c \
-			ft_lstmap_bonus.c \
-			ft_lstnew_bonus.c \
-			ft_lstsize_bonus.c \
+BONUS_SRC = ft_lstadd_back.c \
+			ft_lstadd_front.c \
+			ft_lstclear.c \
+			ft_lstdelone.c \
+			ft_lstiter.c \
+			ft_lstlast.c \
+			ft_lstmap.c \
+			ft_lstnew.c \
+			ft_lstsize.c \
 
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
-all: $(NAME)
+all: ${NAME}
 
-$(NAME): $(OBJ)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+${NAME}: ${OBJ}
+	${AR} $(ARFLAGS) $(NAME) $(OBJ)
 
 %.o: %.c %.h
 	$(CC) $(CFLAGS) $< -c -o $@
 
-bonus: $(NAME) $(BONUS_OBJ)
-	$(AR) $(ARFLAGS) $(NAME) $(BONUS_OBJ)
+bonus: $(NAME) ${BONUS_OBJ}
+	${AR} $(ARFLAGS) $(NAME) $(BONUS_OBJ)
 
 clean:
-	rm -f $(OBJ) $(BONUS_OBJ)
+	rm -f ${OBJ} $(BONUS_OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f ${NAME}
 
 re: fclean all
 
