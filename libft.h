@@ -6,14 +6,13 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 19:48:48 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/17 14:37:41 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 14:44:11 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # include <stdio.h>
 # include <stdlib.h>
-# include <stdio.h>
 # define LIBFT_H
 
 typedef struct s_list
