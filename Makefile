@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: manonlebihan <manonlebihan@student.42.f    +#+  +:+       +#+         #
+#    By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 19:48:34 by mle-biha          #+#    #+#              #
-#    Updated: 2022/06/16 23:55:16 by manonlebiha      ###   ########.fr        #
+#    Updated: 2022/06/17 15:09:46 by mle-biha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,22 +64,22 @@ BONUS_SRC = ft_lstadd_back.c \
 
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
-all: ${NAME}
+all: $(NAME)
 
-${NAME}: ${OBJ}
-	${AR} $(ARFLAGS) $(NAME) $(OBJ)
+$(NAME): $(OBJ)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
 %.o: %.c %.h
 	$(CC) $(CFLAGS) $< -c -o $@
 
-bonus: $(NAME) ${BONUS_OBJ}
-	${AR} $(ARFLAGS) $(NAME) $(BONUS_OBJ)
+bonus: $(NAME) $(BONUS_OBJ)
+	$(AR) $(ARFLAGS) $(NAME) $(BONUS_OBJ)
 
 clean:
-	rm -f ${OBJ} $(BONUS_OBJ)
+	rm -f $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
-	rm -f ${NAME}
+	rm -f $(NAME)
 
 re: fclean all
 
