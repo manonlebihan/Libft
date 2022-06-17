@@ -6,7 +6,7 @@
 /*   By: mle-biha <mle-biha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 09:57:06 by mle-biha          #+#    #+#             */
-/*   Updated: 2022/06/17 14:36:50 by mle-biha         ###   ########.fr       */
+/*   Updated: 2022/06/17 17:08:59 by mle-biha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		size = 1;
 	}
 	p = malloc(nmemb * size);
+	if (p == NULL)
+		return (NULL);
 	ft_bzero(p, nmemb * size);
 	return (p);
 }
